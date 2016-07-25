@@ -6,7 +6,7 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Template" %>">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= action_cable_meta_tag %>
+    <%= action_cable_meta_tag if user_signed_in? %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
